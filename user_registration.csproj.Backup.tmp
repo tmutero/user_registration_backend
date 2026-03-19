@@ -8,14 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Remove="user_registration.Tests\**" />
-	  <Content Remove="user_registration.Tests\**" />
-	  <EmbeddedResource Remove="user_registration.Tests\**" />
-	  <None Remove="user_registration.Tests\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="FluentAssertions" Version="8.9.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.5" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.5" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.5" />
@@ -27,10 +19,8 @@
 		<PackageReference Include="Npgsql" Version="10.0.2" />
 		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.1" />
 		<PackageReference Include="NPOI" Version="2.7.6" />
-		<PackageReference Include="NUnit" Version="4.5.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.5" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.16.0" />
-		<PackageReference Include="xunit" Version="2.9.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -44,6 +34,18 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="10.0.5" />
 	</ItemGroup>
 
-	
+	<ItemGroup>
+	  <_ContentIncludedByDefault Remove="Views\Shared\_ValidationScriptsPartial.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Users\Create.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Users\Delete.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Users\Details.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Users\Edit.cshtml" />
+	  <_ContentIncludedByDefault Remove="Views\Users\Index.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="user_registration.Tests\Tests\Controllers\" />
+	  <Folder Include="user_registration.Tests\Tests\Services\" />
+	</ItemGroup>
 
 </Project>
